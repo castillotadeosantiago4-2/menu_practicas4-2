@@ -1,0 +1,53 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu actividades</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header><h1>  Menu de Aplicaciones Web Practicas   </h1>
+    </header>
+    
+    <div class="alumno-card">
+        <img src="assets/imagenes/foto.png" alt="foto del alumno">
+        
+            <h2>CASTILLO TADEO SANTIAGO</h2>
+             <p>DS4-2 APLICACIONES WEB</p>
+             <div class="dropdown">
+                <button class="dropdownbtn" onclick="ocultarLista()">seleciona un mes</button>
+             </div>
+
+             
+             <div class dropdown-content mes>
+                <button class="mes" onclick="mostrarTareas('septiembre')">septiembre</button>
+
+                <button class="mes" onclick="mostrarTareas('octubre')">octubre</button>
+                
+                <button class="mes"onclick="mostrarTareas('noviembre')">noviembre</button>
+
+             </div>
+     <ul id="lista-tareas" class="tareas oculto">
+        <!-- se llena directamente -->
+    </ul>
+    </div>
+
+       <div class="retro-container">
+    <label for="comentario">Tu comentario:</label>
+    <textarea id="comentario" rows="4" cols="50" placeholder="Escribe tu retroalimentación aquí"></textarea>
+</div>
+
+            <div class="boton-container">
+                <button onclick="mostrarMensaje()">Enviar retroalimentacion</button>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2025 Menu de clases - CASTILLO TADEO SANTIAGO </p>
+        </footer>
+
+        <script src="js/script.js"></script>
+</body>
+
+</html>
