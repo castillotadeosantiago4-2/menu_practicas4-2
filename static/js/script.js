@@ -1,9 +1,9 @@
 function mostrarTareas(mes) {
     const  tareas = {
-        septiembre: 
+        septiembre:
         [
-            {texto: "html- css - Js Audio",url: "https://misitio.com/ej-1"},
-            {texto: "html- css - Js Video",url: "https://misitio.com/ej-2"},
+            {texto: 'VIDEO - CSS - JS', url:'/static/proyectos/P1video4-2/videos.html'},
+            {texto: "AUDIO- CSS - JS AUDIO",url: "/static/proyectos/P2audio4-2/audio.html"},
         ],
         octubre:[
             {texto: "html- css - Js Multiples imagenes",url: "https://misitio.com/ej-3"},
@@ -13,8 +13,8 @@ function mostrarTareas(mes) {
             {texto: "html- css - Js Responsivos",url: "https://misitio.com/ej-5"},
             {texto: "html- css - Js Animacion",url: "https://misitio.com/ej-6"},
         ]
-    
-    
+
+
     };
     const lista = document.getElementById("lista-tareas");
     lista.innerHTML = "";
@@ -25,7 +25,7 @@ function mostrarTareas(mes) {
         li.innerHTML = `<a href="${tarea.url}" target="_blank">${tarea.texto}</a>`;
         lista.appendChild(li);
         lista.classList.remove('oculto')
-    
+
 
 
 
@@ -39,11 +39,12 @@ function mostrarMensaje() {
         alert("Gracias por tu retroalimentacion.");
         document.getElementById("comentario").value = "";
     }
-  
+
 }
 
-function ocultarMensaje() {
-    const lista = document.getElementById("lista-tareas");
-    lista.classList.add('oculto')
-    lista.innerHTML = "";
+function ocultarLista()
+{
+    const lista = document.getElementById('lista-tareas');
+    lista.classList.add('oculto');
+    lista.innerHTML = '';
 }
