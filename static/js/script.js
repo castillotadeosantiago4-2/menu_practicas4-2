@@ -7,7 +7,7 @@
         ],
         octubre:[
             {texto: "“Práctica Fotografías Varios –CASTILLOTADEO",url: "static/proyectos/Práctica 4 Fotografías/index.html"},
-            {texto: "html- css - Js Combinacion objetos",url: "https://misitio.com/ej-4"},
+            {texto: "“Práctica General Examen - castillotadeo",url: "/static/proyectos/p5juegosinfantiles/index.html"},
         ],
         noviembre:  [
             {texto: "html- css - Js Responsivos",url: "https://misitio.com/ej-5"},
