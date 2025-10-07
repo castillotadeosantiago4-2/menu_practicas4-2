@@ -6,14 +6,14 @@ const header = document.querySelector('.site-header .nav');
 const toggle = document.querySelector('.menu-toggle');
 
 toggle.addEventListener('click', () => {
-    
+
     const isOpen = header.classList.toggle('open');
-    
+
     toggle.setAttribute('aria-expanded', String(isOpen));
 });
 
 document.addEventListener('click', (e) => {
-    
+
     const inside = e.target.closest('.site-header');
     if (!inside) {
         header.classList.remove('open');
@@ -40,7 +40,7 @@ function openVisor(index) {
     visorImg.src = images[currentIndex].src;
     visor.classList.add('open');
     visor.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden'; 
+    document.body.style.overflow = 'hidden';
 }
 
 
@@ -48,7 +48,7 @@ function closeVisor() {
     visor.classList.remove('open');
     visor.setAttribute('aria-hidden', 'true');
     visorImg.removeAttribute('src');
-    document.body.style.overflow = 'auto'; 
+    document.body.style.overflow = 'auto';
 }
 
 

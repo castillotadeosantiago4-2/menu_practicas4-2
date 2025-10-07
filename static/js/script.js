@@ -1,4 +1,4 @@
-function mostrarTareas(mes) {
+    function mostrarTareas(mes) {
     const  tareas = {
         septiembre:
         [
@@ -6,7 +6,7 @@ function mostrarTareas(mes) {
             {texto: "AUDIO- CSS - JS AUDIO",url: "/static/proyectos/P2audio4-2/audio.html"},
         ],
         octubre:[
-            {texto: "html- css - Js Multiples imagenes",url: "https://misitio.com/ej-3"},
+            {texto: "“Práctica Fotografías Varios –CASTILLOTADEO",url: "static/proyectos/Práctica 4 Fotografías/index.html"},
             {texto: "html- css - Js Combinacion objetos",url: "https://misitio.com/ej-4"},
         ],
         noviembre:  [
