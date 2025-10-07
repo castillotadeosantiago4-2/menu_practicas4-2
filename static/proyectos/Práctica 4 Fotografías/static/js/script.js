@@ -85,3 +85,4 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft') showPrev();
     if (e.key === 'ArrowRight') showNext();
 });
+document.getElementById('year').textContent = new Date().getFullYear();
