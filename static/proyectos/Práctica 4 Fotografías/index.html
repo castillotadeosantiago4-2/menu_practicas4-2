@@ -8,123 +8,111 @@
 </head>
 <body>
 
-    <header class="site-header" role="banner">
-        <div class="container nav">
-            <div class="brand">Juegos & Galería</div>
-            <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">=</button>
-            <nav class="nav-links" role="navigation">
-                <a href="#inicio">Inicio</a>
-                <a href="#galeria-clasica">Galería clásica</a>
-                <a href="#galeria-vertical">Galería vertical</a>
-                <a href="#galeria-abanico">Galería abanico</a>
-            </nav>
-        </div>
-    </header>
+<header class="site-header" role="banner">
+    <div class="container nav">
+        <div class="brand">Juegos & Galería</div>
+        <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">=</button>
+        <nav class="nav-links" role="navigation">
+            <a href="#inicio">Inicio</a>
+            <a href="#galeria-clasica">Galería clásica</a>
+            <a href="#galeria-vertical">Galería vertical</a>
+            <a href="#galeria-abanico">Galería abanico</a>
+        </nav>
+    </div>
+</header>
 
-    <section id="inicio" class="section hero">
-        <div class="container">
-            <h1>Práctica Fotográfica y Responsiva</h1>
-            <p>Tres Estilos: Horizontal - Vertical - Galería tipo Abanico.</p>
-        </div>
-    </section>
-
-    <section id="galeria-clasica" class="section">
-        <div class="container">
-            <h2>Galería clásica</h2>
-            <p class="muted">Disposición en rejilla, se adapta al ancho del dispositivo.</p>
-            <div class="grid galeria" data-gallery="clasica">
-                <img src="static/assets/images/j1.jpg" alt="Imagen 1" loading="lazy">
-                <img src="static/assets/images/j2.jpg" alt="Imagen 2" loading="lazy">
-                <img src="static/assets/images/j3.jpg" alt="Imagen 3" loading="lazy">
-                <img src="static/assets/images/j4.jpg" alt="Imagen 4" loading="lazy">
-                <img src="static/assets/images/j5.jpeg" alt="Imagen 5" loading="lazy">
-                <img src="static/assets/images/j6.jpg" alt="Imagen 6" loading="lazy">
-            </div>
-        </div>
-    </section>
-
-    <section id="galeria-vertical" class="section alt">
-        <div class="container">
-            <h2>Galería vertical</h2>
-            <p class="muted">Imágenes verticalmente.</p>
-            <div class="vertical galeria" data-gallery="vertical">
-                <img src="static/assets/images/j3.jpg" alt="Imagen 7" loading="lazy" />
-                <img src="static/assets/images/j4.jpg" alt="Imagen 8" loading="lazy" />
-                <img src="static/assets/images/j5.jpeg" alt="Imagen 9" loading="lazy" />
-            </div>
-        </div>
-    </section>
-
-    <section id="galeria-abanico" class="section">
-        <div class="container">
-            <h2>Galería tipo abanico</h2>
-            <p class="muted">Tarjetas ligeramente giradas en abanico; al pasar/abrir, se enderezan y puedes ampliar.</p>
-            <div class="abanico galeria" data-gallery="abanico">
-                <figure class="card">
-                    <img src="static/assets/images/j1.jpg" alt="Abanico 1" loading="lazy">
-                    <figcaption>Abanico 1</figcaption>
-                </figure>
-                <figure class="card">
-                    <img src="static/assets/images/j2.jpg" alt="Abanico 2" loading="lazy">
-                    <figcaption>Abanico 2</figcaption>
-                </figure>
-                <figure class="card">
-                    <img src="static/assets/images/j3.jpg" alt="Abanico 3" loading="lazy">
-                    <figcaption>Abanico 3</figcaption>
-                </figure>
-                <figure class="card">
-                    <img src="static/assets/images/j4.jpg" alt="Abanico 4" loading="lazy">
-                    <figcaption>Abanico 4</figcaption>
-                </figure>
-                <figure class="card">
-                    <img src="static/assets/images/j5.jpeg" alt="Abanico 5" loading="lazy">
-                    <figcaption>Abanico 5</figcaption>
-                </figure>
-            </div>
-        </div>
-    </section>
+<section id="inicio" class="section hero">
+    <div class="container">
+        <h1>Práctica Fotográfica y Responsiva</h1>
+        <p>Tres Estilos: Horizontal - Vertical - Galería tipo Abanico.</p>
+    </div>
+</section>
 
 <section id="galeria-clasica" class="section">
     <div class="container">
         <h2>Galería clásica (grid fluido)</h2>
+        <p class="muted">Disposición en rejilla, se adapta al ancho del dispositivo.</p>
         <div class="grid galeria">
-            <!-- Imágenes originales -->
-            <img src="static/assets/images/j1.jpg" alt="Imagen 1">
-            <img src="static/assets/images/j2.jpg" alt="Imagen 2">
-            <img src="static/assets/images/j3.jpg" alt="Imagen 3">
+            <!-- Fotos originales -->
+            <img src="static/assets/images/j1.jpg" alt="Imagen 1" loading="lazy">
+            <img src="static/assets/images/j2.jpg" alt="Imagen 2" loading="lazy">
+            <img src="static/assets/images/j3.jpg" alt="Imagen 3" loading="lazy">
+            <img src="static/assets/images/j4.jpg" alt="Imagen 4" loading="lazy">
+            <img src="static/assets/images/j5.jpeg" alt="Imagen 5" loading="lazy">
+            <img src="static/assets/images/j6.jpg" alt="Imagen 6" loading="lazy">
 
             <!-- Evidencias -->
-            <img src="static/assets/images/evidencia1.png" alt="Evidencia 1">
-            <img src="static/assets/images/evidencia2.png" alt="Evidencia 2">
-            <img src="static/assets/images/evidencia3.png" alt="Evidencia 3">
-            <img src="static/assets/images/evidencia4.png" alt="Evidencia 4">
-            <img src="static/assets/images/evidencia5.png" alt="Evidencia 5">
-            <img src="static/assets/images/evidencia6.png" alt="Evidencia 6">
-            <img src="static/assets/images/evidencia7.png" alt="Evidencia 7">
-            <img src="static/assets/images/evidencia8.png" alt="Evidencia 8">
-            <img src="static/assets/images/EVIDENCIA9.1.png" alt="Evidencia 9">
+            <img src="static/assets/images/Fase 1.png" alt="Evidencia 1" loading="lazy">
+            <img src="static/assets/images/fase 2.png" alt="Evidencia 2" loading="lazy">
+            <img src="static/assets/images/fase 3.png" alt="Evidencia 3" loading="lazy">
+            <img src="static/assets/images/fase 4.png" alt="Evidencia 3.1" loading="lazy">
+            <img src="static/assets/images/fase 5.png" alt="Evidencia 4" loading="lazy">
+            <img src="static/assets/images/fase 6.png" alt="Evidencia 4.1" loading="lazy">
+            <img src="static/assets/images/fase 7.png" alt="Evidencia 5" loading="lazy">
+            <img src="static/assets/images/fase 8.png" alt="Evidencia 5.1" loading="lazy">
+            <img src="static/assets/images/fase 9.png" alt="Evidencia 6" loading="lazy"
 
             <!-- Capturas finales -->
-            <img src="static/assets/images/f1.png" alt="Uso en Escritorio">
-            <img src="static/assets/images/f2.jpeg" alt="Uso en Móvil">
+            <img src="static/assets/images/capturadeescritorio.png" alt="Uso en Escritorio" loading="lazy">
+            <img src="static/assets/images/Captura movil.jpg" alt="Uso en Móvil" loading="lazy">
         </div>
     </div>
 </section>
 
-
-    <div id="visor" class="visor" aria-hidden="true">
-        <button class="close" id="closeVisor" aria-label="Cerrar">x</button>
-        <button class="nav prev" id="prevVisor" aria-label="Anterior"></button>
-        <img id="visorImg" alt="Imagen ampliada" />
-        <button class="nav next" id="nextVisor" aria-label="Siguiente">></button>
-    </div>
-
-    <footer class="site-footer">
-        <div class="container">
-            <p><span id="year"></span> Práctica Fotográfica Creada por castillo tadeo santiago</p>
+<section id="galeria-vertical" class="section alt">
+    <div class="container">
+        <h2>Galería vertical</h2>
+        <p class="muted">Imágenes verticalmente.</p>
+        <div class="vertical galeria" data-gallery="vertical">
+            <img src="static/assets/images/j3.jpg" alt="Imagen 7" loading="lazy" />
+            <img src="static/assets/images/j4.jpg" alt="Imagen 8" loading="lazy" />
+            <img src="static/assets/images/j5.jpeg" alt="Imagen 9" loading="lazy" />
         </div>
-    </footer>
+    </div>
+</section>
 
-    <script src="static/js/script.js"></script>
+<section id="galeria-abanico" class="section">
+    <div class="container">
+        <h2>Galería tipo abanico</h2>
+        <p class="muted">Tarjetas ligeramente giradas en abanico; al pasar/abrir, se enderezan y puedes ampliar.</p>
+        <div class="abanico galeria" data-gallery="abanico">
+            <figure class="card">
+                <img src="static/assets/images/j1.jpg" alt="Abanico 1" loading="lazy">
+                <figcaption>Abanico 1</figcaption>
+            </figure>
+            <figure class="card">
+                <img src="static/assets/images/j2.jpg" alt="Abanico 2" loading="lazy">
+                <figcaption>Abanico 2</figcaption>
+            </figure>
+            <figure class="card">
+                <img src="static/assets/images/j3.jpg" alt="Abanico 3" loading="lazy">
+                <figcaption>Abanico 3</figcaption>
+            </figure>
+            <figure class="card">
+                <img src="static/assets/images/j4.jpg" alt="Abanico 4" loading="lazy">
+                <figcaption>Abanico 4</figcaption>
+            </figure>
+            <figure class="card">
+                <img src="static/assets/images/j5.jpeg" alt="Abanico 5" loading="lazy">
+                <figcaption>Abanico 5</figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+
+<div id="visor" class="visor" aria-hidden="true">
+    <button class="close" id="closeVisor" aria-label="Cerrar">x</button>
+    <button class="nav prev" id="prevVisor" aria-label="Anterior"></button>
+    <img id="visorImg" alt="Imagen ampliada" />
+    <button class="nav next" id="nextVisor" aria-label="Siguiente">></button>
+</div>
+
+<footer class="site-footer">
+    <div class="container">
+        <p><span id="year"></span> Práctica Fotográfica Creada por castillo tadeo santiago</p>
+    </div>
+</footer>
+
+<script src="static/js/script.js"></script>
 </body>
 </html>

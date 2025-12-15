@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café de Altura – Tu momento perfecto cada mañana</title>
+  <link rel="stylesheet" href="static/css/negocio.css">
+</head>
+<body>
+
+  <!-- AUDIO TESTIMONIO -->
+  <audio id="bg-music" src="static/assets/audios/1.mp3" preload="metadata"></audio>
+  <div class="audio-control">
+    <button id="toggleAudio" aria-pressed="false">▶️ Escuchar testimonio</button>
+  </div>
+
+  <!-- ENCABEZADO -->
+  <header>
+    <div class="nav">
+      <div class="brand">Café de Altura</div>
+      <button class="menu-toggle" aria-expanded="false" aria-label="Abrir menú">☰</button>
+      <ul class="menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#producto">Productos</a></li>
+        <li><a href="#beneficios">Beneficios</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#testimonios">Testimonios</a></li>
+        <li><a href="#video">Video</a></li>
+        <li><a href="#precios">Precios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <div class="container hero-wrap">
+      <div class="hero-media">
+        <img src="static/assets/images/cafe-bolsa.jpg" alt="Bolsa de café artesanal sobre fondo rústico">
+      </div>
+      <div class="hero-text">
+        <h1>Café de Altura: calidad, aroma y pasión</h1>
+        <p>De las montañas a tu mesa: disfruta nuestro café 100% mexicano, tostado con dedicación.</p>
+        <a class="btn-cta" href="#galeria">Ver galería</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTOS -->
+  <section id="producto">
+    <div class="container">
+      <h2>Nuestros productos</h2>
+      <div class="grid two">
+        <div class="card">
+          <img src="static/assets/images/cafe-grano.jpg" alt="Granos de café arábica tostados">
+          <h3>Café Arábica Selecto</h3>
+          <p>Grano entero o molido, tostado medio con notas a cacao y caramelo. Perfecto para espresso o filtrado.</p>
+        </div>
+        <div class="card">
+          <img src="static/assets/images/cafe-hero.jpg" alt="Taza de café en mesa de madera">
+          <h3>Blend Sierra 500g</h3>
+          <p>Tueste fresco, molienda personalizada y empaque con válvula para conservar su aroma natural.</p>
+          <ul class="bullets">
+            <li>Origen único 1,800 msnm</li>
+            <li>Tueste artesanal</li>
+            <li>Envío nacional</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFICIOS -->
+  <section id="beneficios" class="strip">
+    <div class="container">
+      <h2>Ventajas de elegir Café de Altura</h2>
+      <div class="grid three">
+        <div class="benefit">
+          <h3>Tueste reciente</h3>
+          <p>Tu café se tuesta cada semana, justo antes del envío.</p>
+        </div>
+        <div class="benefit">
+          <h3>Origen rastreable</h3>
+          <p>Cada lote tiene trazabilidad desde la finca hasta tu taza.</p>
+        </div>
+        <div class="benefit">
+          <h3>Apoyo local</h3>
+          <p>Trabajamos directamente con pequeños productores de montaña.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA (nuevo orden de fotos) -->
+  <section id="galeria">
+    <div class="container">
+      <h2>Galería</h2>
+      <p>Imágenes reales del proceso y los productos.</p>
+      <div class="grid gallery">
+        <img class="zoomable" src="static/assets/images/g5.jpg" alt="Capuchino con arte latte">
+        <img class="zoomable" src="static/assets/images/g1.jpg" alt="Tueste artesanal de café">
+        <img class="zoomable" src="static/assets/images/g4.jpg" alt="Método V60 en preparación">
+        <img class="zoomable" src="static/assets/images/g2.jpg" alt="Barista preparando espresso">
+        <img class="zoomable" src="static/assets/images/g6.jpg" alt="Empaques listos para envío">
+        <img class="zoomable" src="static/assets/images/g3.jpg" alt="Granos recién tostados">
+        <img class="zoomable" src="static/assets/images/g4.jpg" alt="Filtrado artesanal">
+        <img class="zoomable" src="static/assets/images/g1.jpg" alt="Café en granos sobre tela rústica">
+        <img class="zoomable" src="static/assets/images/g5.jpg" alt="Taza servida con arte latte">
+      </div>
+    </div>
+
+    <div id="modal" class="modal" aria-hidden="true" role="dialog">
+      <button class="modal-close" aria-label="Cerrar">✖</button>
+      <img id="modal-img" src="" alt="">
+      <p id="modal-caption"></p>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section id="testimonios" class="strip">
+    <div class="container">
+      <h2>Lo que opinan nuestros clientes</h2>
+      <div class="grid three">
+        <div class="card">
+          <img src="static/assets/images/g2.jpg" alt="Cliente 1" style="width:90px;height:90px;border-radius:50%;margin:auto;">
+          <p>"El sabor y aroma me recordaron al café de mi abuela. Increíble calidad y atención."</p>
+          <p><strong>– Fernanda G.</strong></p>
+        </div>
+        <div class="card">
+          <img src="static/assets/images/g3.jpg" alt="Cliente 2" style="width:90px;height:90px;border-radius:50%;margin:auto;">
+          <p>"Recibí mi pedido en 2 días, muy bien empacado y con un aroma delicioso."</p>
+          <p><strong>– Luis Hernández</strong></p>
+        </div>
+        <div class="card">
+          <img src="static/assets/images/g6.jpg" alt="Cliente 3" style="width:90px;height:90px;border-radius:50%;margin:auto;">
+          <p>"No cambio este café por nada, el tueste artesanal marca la diferencia."</p>
+          <p><strong>– Paola Rivera</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section id="video">
+    <div class="container">
+      <h2>Video demostrativo</h2>
+      <p>Desde el grano verde hasta tu taza: conoce nuestro proceso.</p>
+      <div class="video-wrap">
+        <video controls poster="static/assets/images/g20.jpg">
+          <source src="static/assets/videos/v1.mp4" type="video/mp4">
+          Tu navegador no soporta video HTML5.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRECIOS -->
+  <section id="precios" class="strip">
+    <div class="container">
+      <h2>Precios y presentaciones</h2>
+      <div class="grid three">
+        <div class="card price">
+          <h3>1 kg</h3>
+          <p class="amount">$499 MXN</p>
+          <ul class="bullets">
+            <li>Perfecto para oficinas</li>
+            <li>Empaque con válvula</li>
+            <li>Tueste reciente</li>
+          </ul>
+          <a class="btn-cta" href="#contacto">Comprar</a>
+        </div>
+        <div class="card price featured">
+          <h3>500 g</h3>
+          <p class="amount">$269 MXN</p>
+          <ul class="bullets">
+            <li>Tueste medio</li>
+            <li>Blend Sierra</li>
+            <li>Envío incluido</li>
+          </ul>
+          <a class="btn-cta" href="#contacto">Comprar</a>
+        </div>
+        <div class="card price">
+          <h3>250 g</h3>
+          <p class="amount">$149 MXN</p>
+          <ul class="bullets">
+            <li>Ideal para probar</li>
+            <li>Grano o molido</li>
+            <li>Empaque ecológico</li>
+          </ul>
+          <a class="btn-cta" href="#contacto">Comprar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <div class="container">
+      <h2>Contacto</h2>
+      <p>¿Tienes dudas o quieres hacer un pedido personalizado? Escríbenos:</p>
+      <form class="form-contacto" onsubmit="event.preventDefault(); alert('¡Gracias! Te responderemos pronto.');">
+        <input type="text" placeholder="Nombre completo" required>
+        <input type="email" placeholder="Correo electrónico" required>
+        <textarea rows="5" placeholder="Mensaje o tipo de café deseado"></textarea>
+        <button type="submit">✉️ Enviar mensaje</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; <span id="year"></span> Café de Altura — Tradición con aroma</p>
+  </footer>
+
+  <script src="static/js/negocio.js"></script>
+</body>
+</html>

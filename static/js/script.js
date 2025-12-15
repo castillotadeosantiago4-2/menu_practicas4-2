@@ -8,6 +8,8 @@
         octubre:[
             {texto: "“Práctica Fotografías Varios –CASTILLOTADEO",url: "static/proyectos/Práctica 4 Fotografías/index.html"},
             {texto: "“Práctica General Examen - castillotadeo",url: "/static/proyectos/p5juegosinfantiles/index.html"},
+            {texto: "“examen U2 –CASTILLO TADEO",url: "/static/proyectos/Examen-U2-CASTILLO-TADEO-Frontend/index.html"},
+
         ],
         noviembre:  [
             {texto: "html- css - Js Responsivos",url: "https://misitio.com/ej-5"},

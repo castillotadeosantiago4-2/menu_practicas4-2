@@ -5,123 +5,264 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Castillo Tadeo - Juegos Infantiles</title>
   <link rel="stylesheet" href="static/css/estilos.css">
+
+  <style>
+    /* Estilos específicos para evidencias */
+    .evidencias {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .evidencias img,
+    .grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .evidencias img:hover,
+    .grid img:hover {
+      transform: scale(1.05);
+    }
+
+    /* ===== MODAL (Lightbox) ===== */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .modal-content {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      animation: zoom 0.3s;
+    }
+
+    @keyframes zoom {
+      from { transform: scale(0.3); }
+      to { transform: scale(1); }
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+      user-select: none;
+    }
+  </style>
 </head>
+
 <body>
-  <header>
-    <div class="nav">
-      <div class="brand">Juegos Infantiles</div>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">☰</button>
-      <nav id="main-nav">
-        <ul class="menu">
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#productos">Productos</a></li>
-          <li><a href="#proyectos">Proyectos</a></li>
-          <li><a href="#testimonios">Testimonios</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-      </nav>
+
+<header>
+  <div class="nav">
+    <div class="brand">Juegos Infantiles</div>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">☰</button>
+    <nav id="main-nav">
+      <ul class="menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#galeria-evidencias">Evidencias</a></li>
+        <li><a href="#testimonios">Testimonios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section id="inicio" class="hero">
+    <h1>Bienvenido a Juegos Infantiles</h1>
+    <p>Diseñamos y construimos juegos y mobiliario para espacios públicos y privados.</p>
+  </section>
+
+  <!-- Audio -->
+  <audio id="bg-music" src="static/assets/audios/1.mp3" loop></audio>
+  <div class="audio-control">
+    <button id="toggleAudio" aria-pressed="false">🔈 Activar sonido</button>
+  </div>
+
+  <section id="productos">
+    <h2>Productos</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="static/assets/images/j1.jpg" alt="Juego Infantil">
+        <h3>Juegos Clásicos</h3>
+        <p>Estructuras recreativas seguras y divertidas.</p>
+      </div>
+      <div class="card">
+        <img src="static/assets/images/j2.jpg" alt="Mobiliario Urbano">
+        <h3>Mobiliario Urbano</h3>
+        <p>Bancas, mesas y áreas de descanso para parques.</p>
+      </div>
+      <div class="card">
+        <img src="static/assets/images/j3.jpg" alt="Juegos Inclusivos">
+        <h3>Juegos Inclusivos</h3>
+        <p>Diseñados para todas las edades y capacidades.</p>
+      </div>
     </div>
-  </header>
+  </section>
 
-  <main>
-    <section id="inicio" class="hero">
-      <h1>Bienvenido a Juegos Infantiles</h1>
-      <p>Diseñamos y construimos juegos y mobiliario para espacios públicos y privados.</p>
-    </section>
+  <section id="proyectos">
+    <h2>Proyectos</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="static/assets/images/j4.jpg" alt="Parque Residencial">
+        <h3>Parque Residencial</h3>
+      </div>
+      <div class="card">
+        <img src="static/assets/images/j5.jpeg" alt="Colegio Infantil">
+        <h3>Colegio Infantil</h3>
+      </div>
+      <div class="card">
+        <img src="static/assets/images/j6.jpg" alt="Área de Restaurante">
+        <h3>Área de Restaurante</h3>
+      </div>
+    </div>
+  </section>
 
-    <!-- control de audio -->
-    <audio id="bg-music" src="static/assets/audios/1.mp3" loop></audio>
-    <div class="audio-control">
-      <button id="toggleAudio" aria-pressed="false">🔈 Activar sonido</button>
+  <!-- Evidencias -->
+  <section id="galeria-evidencias">
+    <h2>Galería de Evidencias</h2>
+    <p>Documentación de la práctica con capturas y evidencias.</p>
+
+    <div class="grid evidencias">
+      <img src="static/assets/images/pb1.png" alt="Evidencia 1">
+      <img src="static/assets/images/pb2.png" alt="Evidencia 2">
     </div>
 
-    <section id="productos">
-      <h2>Productos</h2>
-      <div class="grid">
-        <div class="card">
-          <img src="static/assets/images/j1.jpg" alt="Juego Infantil">
-          <h3>Juegos Clásicos</h3>
-          <p>Estructuras recreativas seguras y divertidas.</p>
-        </div>
+    <div class="grid evidencias">
+      <img src="static/assets/images/pb3.png" alt="Evidencia 3">
+      <img src="static/assets/images/pb4.png" alt="Evidencia 3.1">
+    </div>
 
-        <div class="card">
-          <img src="static/assets/images/j2.jpg" alt="Mobiliario Urbano">
-          <h3>Mobiliario Urbano</h3>
-          <p>Bancas, mesas y áreas de descanso para parques.</p>
-        </div>
+    <div class="grid evidencias">
+      <img src="static/assets/images/pb5.png" alt="Evidencia 4">
+      <img src="static/assets/images/pb6.png" alt="Evidencia 4.1">
+    </div>
 
-        <div class="card">
-          <img src="static/assets/images/j3.jpg" alt="Juegos Inclusivos">
-          <h3>Juegos Inclusivos</h3>
-          <p>Diseñados para todas las edades y capacidades.</p>
-        </div>
+    <div class="grid evidencias">
+      <img src="static/assets/images/pb7.png" alt="Evidencia 5">
+      <img src="static/assets/images/pb8.png" alt="Evidencia 5.1">
+    </div>
+
+    <div class="grid evidencias">
+      <img src="static/assets/images/evidencia9.png" alt="Evidencia 9">
+    </div>
+  </section>
+
+  <section id="testimonios">
+    <h2>Testimonios</h2>
+    <p>La voz de nuestros clientes</p>
+
+    <div class="testimonios-grid">
+      <div class="testimonio">
+        <video controls>
+          <source src="static/assets/videos/v1.mp4" type="video/mp4">
+          Tu navegador no soporta video.
+        </video>
+        <p>“El parque quedó increíble, instalación rápida y profesional.” — Comité vecinal</p>
       </div>
-    </section>
 
-    <section id="proyectos">
-      <h2>Proyectos</h2>
-      <div class="grid">
-        <div class="card">
-          <img src="static/assets/images/j4.jpg" alt="Parque Residencial">
-          <h3>Parque Residencial</h3>
-        </div>
-        <div class="card">
-          <img src="static/assets/images/j5.jpeg" alt="Colegio Infantil">
-          <h3>Colegio Infantil</h3>
-        </div>
-        <div class="card">
-          <img src="static/assets/images/j6.jpg" alt="Área de Restaurante">
-          <h3>Área de Restaurante</h3>
-        </div>
+      <div class="testimonio">
+        <video controls>
+          <source src="static/assets/videos/v2.mp4" type="video/mp4">
+          Tu navegador no soporta video.
+        </video>
+        <p>“Excelente atención, servicio y diseño impecable.” — Cliente particular</p>
       </div>
-    </section>
 
-    <section id="testimonios">
-      <h2>Testimonios</h2>
-      <p>La voz de nuestros clientes</p>
-      <div class="testimonios-grid">
-        <div class="testimonio">
-          <video controls>
-            <source src="static/assets/videos/v1.mp4" type="video/mp4">
-            Tu navegador no soporta video.
-          </video>
-          <p>“El parque quedó increíble, instalación rápida y profesional.” — Comité vecinal</p>
-        </div>
-
-        <div class="testimonio">
-          <video controls>
-            <source src="static/assets/videos/v2.mp4" type="video/mp4">
-            Tu navegador no soporta video.
-          </video>
-          <p>“Excelente atención, servicio y diseño impecable.” — Cliente particular</p>
-        </div>
-
-        <div class="testimonio">
-          <video controls>
-            <source src="static/assets/videos/v3.mp4" type="video/mp4">
-            Tu navegador no soporta video.
-          </video>
-          <p>“Nos acompañaron en todo el proceso, resultado impecable.” — Cliente residencial</p>
-        </div>
+      <div class="testimonio">
+        <video controls>
+          <source src="static/assets/videos/v3.mp4" type="video/mp4">
+          Tu navegador no soporta video.
+        </video>
+        <p>“Nos acompañaron en todo el proceso, resultado impecable.” — Cliente residencial</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <p>Envíanos un mensaje y te responderemos lo antes posible.</p>
-      <form onsubmit="event.preventDefault(); alert('¡Gracias por contactarnos!');" class="form-contacto">
-        <input type="text" name="nombre" placeholder="Tu nombre completo" required>
-        <input type="email" name="email" placeholder="Tu correo electrónico" required>
-        <textarea name="mensaje" placeholder="Escribe tu mensaje aquí..." rows="5" required></textarea>
-        <button type="submit">Enviar mensaje</button>
-      </form>
-    </section>
-  </main>
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Envíanos un mensaje y te responderemos lo antes posible.</p>
 
-  <footer>
-    <p>&copy; <span id="year"></span> Juegos Infantiles. Todos los derechos reservados.</p>
-  </footer>
+    <form onsubmit="event.preventDefault(); alert('¡Gracias por contactarnos!');" class="form-contacto">
+      <input type="text" name="nombre" placeholder="Tu nombre completo" required>
+      <input type="email" name="email" placeholder="Tu correo electrónico" required>
+      <textarea name="mensaje" placeholder="Escribe tu mensaje aquí..." rows="5" required></textarea>
+      <button type="submit">Enviar mensaje</button>
+    </form>
+  </section>
 
-  <script src="static/js/script.js"></script>
+</main>
+
+<footer>
+  <p>&copy; <span id="year"></span> Juegos Infantiles. Todos los derechos reservados.</p>
+</footer>
+
+<!-- MODAL PARA IMÁGENES -->
+<div id="imgModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+
+<script src="static/js/script.js"></script>
+
+<script>
+  /* Año automático */
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  /* Control de audio */
+  const audio = document.getElementById('bg-music');
+  const btnAudio = document.getElementById('toggleAudio');
+
+  btnAudio.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+      btnAudio.textContent = "🔊 Sonido activado";
+    } else {
+      audio.pause();
+      btnAudio.textContent = "🔈 Activar sonido";
+    }
+  });
+
+  /* ====== IMÁGENES CLICKEABLES ====== */
+  const modal = document.getElementById("imgModal");
+  const modalImg = document.getElementById("modalImg");
+  const closeBtn = document.querySelector(".close");
+
+  document.querySelectorAll("img").forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "flex";
+      modalImg.src = img.src;
+    });
+  });
+
+  closeBtn.onclick = () => {
+    modal.style.display = "none";
+  };
+
+  modal.addEventListener("click", (e) => {
+    if (e.target !== modalImg) {
+      modal.style.display = "none";
+    }
+  });
+</script>
+
 </body>
 </html>
